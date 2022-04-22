@@ -1,0 +1,27 @@
+.form__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__field {
+  border: none;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: start;
+  align-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #F3F3F3;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 15px 0;
+}
+.form__sub-btn {
+  display: flex;
+  justify-content: end;
+}
+
+/*# sourceMappingURL=MyForm.css.map */

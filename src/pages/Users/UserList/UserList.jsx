@@ -1,19 +1,21 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import './UserList.scss';
-import UserService from "../../API/UserService";
-import {useFetching} from "../../hooks/useFetching";
-import UserCard from "../../components/Users/UserCard/UserCard";
-import Loader from "../../components/UI/Loader/Loader";
+import React, {useContext, useEffect, useState} from 'react';
+import UserService from "../../../API/UserService";
+import {useFetching} from "../../../hooks/useFetching";
+import UserCard from "../../../components/UserCard/UserCard";
+import Loader from "../../../components/UI/Loader/Loader";
 import './UserList.scss'
+import {useUsers} from "../../../hooks/useUsers";
+import {FilterContext} from "../../../context";
 const UserList = () => {
+
     const [users, setUsers] = useState([]);
+    const {filter, setFilter} = useContext(FilterContext);
+    const sortedUsers = useUsers(users, filter.sort);
 
     const [fetchUsers, isUsersLoading, userError] = useFetching(async () => {
         const response = await UserService.getAll();
         setUsers(response.data);
     })
-
     useEffect( () => {
         fetchUsers();
     }, [])
@@ -27,7 +29,7 @@ const UserList = () => {
             {isUsersLoading
                 ? <Loader/>
                 : <div>
-                    {users.map(user =>
+                    {sortedUsers.map(user =>
                         <UserCard user={user} key={user.id}/>
                     )}
                 </div>

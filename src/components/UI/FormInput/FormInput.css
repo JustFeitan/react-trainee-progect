@@ -3,12 +3,14 @@
   font-weight: 400;
   margin-bottom: 5px;
 }
+
 .error-message {
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 5px;
   color: red;
 }
+
 .input {
   width: 50%;
   margin-bottom: 15px;
@@ -17,16 +19,16 @@
   border-radius: 5px;
   height: 30px;
   padding: 5px 10px;
-  &:disabled{
-    color: rgba(0, 0, 0, 0.3);
-  }
 }
-
+.input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
 
 .not-valid {
   border: 1px solid red;
-  &:focus{
-    outline: red;
-  }
+}
+.not-valid:focus {
+  outline: red;
 }
 
+/*# sourceMappingURL=FormInput.css.map */

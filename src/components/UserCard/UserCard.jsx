@@ -1,20 +1,21 @@
 import React from 'react';
-import './UserCard.scss'
+import {Link} from "react-router-dom";
 const UserCard = ({user}) => {
+
     return (
-        <div  className="users__card">
-            <div className="users__card-info">
-                <div className="users__card-info-field">
+        <div  className='users__card'>
+            <div className='users__card-info'>
+                <div >
                     <span>ФИО: </span>{user.name}
                 </div>
-                <div className="users__card-info-field">
+                <div >
                     <span>город: </span> {user.address.city}
                 </div>
-                <div className="users__card-info-field">
+                <div >
                     <span>компания: </span>{user.company.name}
                 </div>
             </div>
-            <a to=''>Подробнее</a>
+            <Link to={`profile/${user.id}`}>Подробнее</Link>
         </div>
     );
 };

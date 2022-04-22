@@ -1,0 +1,30 @@
+.users {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding: 31px;
+  align-items: stretch;
+}
+.users__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #F3F3F3;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.users__card-info {
+  display: flex;
+  flex-direction: column;
+}
+.users__card div span {
+  color: #A3A3A3;
+}
+.users__card div + div {
+  margin-top: 12px;
+}
+
+/*# sourceMappingURL=UserList.css.map */

@@ -9,11 +9,11 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
-  &:disabled{
-    background: #AFAFAF;
-    color: white;
-    cursor: initial;
-  }
+}
+.myBtn:disabled {
+  background: #AFAFAF;
+  color: white;
+  cursor: initial;
 }
 
 .isSubmit {
@@ -21,3 +21,4 @@
   color: white;
 }
 
+/*# sourceMappingURL=MyButton.module.css.map */
